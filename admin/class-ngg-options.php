@@ -862,7 +862,7 @@ class NGG_Options extends NGG_Post_Admin_Page {
 							);
 
 							foreach( $options as $option => $val ) {
-								echo $this->convert_fx_to_optgroup( $val, $option, $ngg_options );
+								echo $this->convert_fx_to_optgroup( $val, $ngg_options, $option );
 							}
 							?>
 						</select>
@@ -959,7 +959,7 @@ class NGG_Options extends NGG_Post_Admin_Page {
 	 *
 	 * @return string The output.
 	 */
-	private function convert_fx_to_optgroup( $data, $title = null, $ngg_options ) {
+	private function convert_fx_to_optgroup( $data, $ngg_options, $title = null ) {
 
 		if ( is_null( $title ) ) {
 			$out = null;
